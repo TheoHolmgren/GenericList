@@ -14,7 +14,7 @@ namespace GenericList
 
         public ListOfObjects()
         {
-            theList = T[noOfElements];
+            theList = new T[noOfElements];
             nextIndex = 0;
         }
 
@@ -27,7 +27,19 @@ namespace GenericList
             }
             theList[nextIndex] = obj;
             nextIndex++;
-
         }
-    }
-}
+
+            public T GetObject(int index)
+            {
+                if (index >= theList.Length)
+            {
+                Console.WriteLine("Array index too high");
+                return default(T);
+
+            }
+            return theList[index];
+            }
+        }
+        }
+    
+
