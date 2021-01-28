@@ -12,12 +12,18 @@ namespace GenericList
         private int noOfElements = 10;
         private int nextIndex; 
 
+        // Beskriv vad kontruktorn gör här
         public ListOfObjects()
         {
             theList = new T[noOfElements];
             nextIndex = 0;
         }
 
+        //Beskriv vad metoden AddObject gör här
+        //Metoden AddObject skapas med parametrarna T och obj
+        //Inom metoden AddObject så finns det en If-sats som säger att om nextIndex är större än eller lika med längden av listan så printas det ut "Array length exceeded"
+        //Variabeln obj tilldelas theList med indexet nextIndex
+        //nextIndex plussas på och itererar igenom listan
         public void AddObject(T obj)
         {
             if (nextIndex >= theList.Length)
@@ -29,6 +35,8 @@ namespace GenericList
             nextIndex++;
         }
 
+        //Beskriv vad metoden GetObject gör här
+        //Metoden GetObject  gör...
             public T GetObject(int index)
             {
                 if (index >= theList.Length)
